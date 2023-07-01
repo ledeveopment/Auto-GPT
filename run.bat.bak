@@ -1,3 +1,10 @@
+@echo off
+set CONDAPATH=C:\Anaconda3
+set ENVNAME=gpt
+if %ENVNAME%==fbprophet (set ENVPATH=%CONDAPATH%) else (set ENVPATH=%CONDAPATH%\envs\%ENVNAME%)
+call %CONDAPATH%\Scripts\activate.bat %ENVNAME%
+cd "C:\ai_work\GitHub\Auto-GPT\"
+
 setlocal enabledelayedexpansion
 
 :FindPythonCommand
